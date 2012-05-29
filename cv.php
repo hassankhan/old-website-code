@@ -278,7 +278,7 @@
     </footer><script src="js/lib/jquery-1.7.2.min.js" type="text/javascript">
 </script><script src="js/lib/less-1.3.0.min.js" type="text/javascript">
 </script><script type="text/javascript">
-    var _gaq=_gaq||[];
+var _gaq=_gaq||[];
         _gaq.push(['_setAccount','UA-32000161-1']);
         _gaq.push(['_trackPageview']);
         (function(){var ga=document.createElement('script');
