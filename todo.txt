@@ -1,0 +1,10 @@
+TO DO:
+
+ - Delete "old" folder
+ - Write About Me
+ - Create blog
+ - Host code snippets online
+ - Create and link a GitHub folder?
+ -
+
+Colour Scheme: http://colorschemedesigner.com/#3x21TZUGg8Alg

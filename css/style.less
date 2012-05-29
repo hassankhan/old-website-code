@@ -1,0 +1,219 @@
+/**********************
+       CONSTANTS
+***********************/
+
+@primary1:#006FC4;
+@primary2:#0D6DB7;
+@primary3:#0065B2;
+@primary4:#248AD8;
+@primary5:#4196D8;
+
+@secondary1:#FF9200;
+@secondary2:#EE8F10;
+@secondary3:#E78400;
+@secondary4:#FFA42A;
+@secondary5:#FFB24C;
+
+@defFont:'Open Sans', sans-serif;
+@defFontSize:16px;
+@defFontColour:#FFFFFF;
+@defRadius:10px;
+@defPadding:1em;
+
+/*********************************
+   OPERATIONS & COLOR FUNCTIONS
+**********************************/
+
+@defBackColour:@primary1;
+@defForeColour:@primary4;
+@defBorder:2px solid @primary2;
+
+
+/**********************
+        MIXINS
+***********************/
+
+.Round(@radius:@defRadius) {
+	-webkit-border-radius:@radius;
+	-moz-border-radius:@radius;
+	border-radius:@radius;
+}
+
+.RoundTop(@radius:@defRadius) {
+	border-top-left-radius:@radius;
+	border-top-right-radius:@radius;
+}
+
+.RoundBottom(@radius:@defRadius) {
+	border-bottom-left-radius:@radius;
+	border-bottom-right-radius:@radius;
+}
+
+.PaddingV(@padding:@defPadding) {
+	padding-top:@padding;
+	padding-bottom:@padding;
+}
+
+/**********************
+         STYLES
+***********************/
+html, body {
+	height:100%;
+}
+body {
+	background:@defBackColour;
+	font-family:@defFont;
+	font-size:@defFontSize;
+	color:@defFontColour;
+}
+
+.header {
+	.RoundBottom();
+	.PaddingV();
+	background:@defForeColour;
+	overflow:hidden;
+}
+
+nav h1 {
+	font-size:@defFontSize + 2;
+}
+
+.title h2 {
+	font-size:20px;
+	text-align:center;
+}
+
+
+a {
+	text-decoration:none;
+}
+a:link {
+	color:#FFFFFF;
+}
+a:visited {
+	color:#FFB24C;
+}
+a:hover {
+	color:#FFA42A;
+}
+a:active {
+	color:#E78400;
+}
+
+hgroup {
+}
+
+.section {
+	.Round();
+	.PaddingV();
+	padding-top:1em;
+	padding-bottom:1em;
+	background:@defForeColour;
+	overflow:hidden;
+}
+
+.article {
+}
+.article h1 {
+	font-size:@defFontSize+@defFontSize;
+	letter-spacing:3px;
+}
+.article h2 {
+	font-size:@defFontSize+(@defFontSize*3/4)+0.5;
+	letter-spacing:2px;
+}
+.article h3 {
+	font-size:@defFontSize+(@defFontSize/2);
+}
+.article h4 {
+	font-size:@defFontSize+(@defFontSize/4)+0.5;
+}
+.article h5 {
+	font-size:@defFontSize+(@defFontSize/8)+0.25;
+}
+.article h1, h2, h3, h4, h5, h6, {
+	.PaddingV(0.5em);
+	line-height:2em;
+	text-align:center;
+}
+.article h3, h4, h5{
+	letter-spacing:1px;
+}
+.article p {
+	line-height:1.5em;
+}
+.article ul {
+	.PaddingV();
+}
+.article li {
+	padding:0.5em;
+	line-height: 1.5em;
+	list-style-type:none;
+}
+
+.aside {
+}
+.aside h1 {
+	font-style:italic;
+	font-size:1.5*@defFontSize;
+}
+.aside h1, h2, h3, h4, h5, h6, p {
+	line-height:1.5em;
+}
+
+.form {
+	.Round();
+	background:@primary5;
+	border:@defBorder;
+}
+.form label {
+	.PaddingV(2em);
+	padding-bottom:1em;
+	display:block;
+	width:100%;
+
+}
+.form input, textarea {
+	.Round();
+	.PaddingV(1em);
+	padding-left:0.5em;
+	padding-right:0.5em;
+	width:93%;
+	font-family:@defFont;
+	font-size:0.9em;
+	border:@defBorder;
+}
+.form textarea {
+	height:200px;
+}
+.form #formSubmit {
+	width:inherit;
+	background:@primary5;
+	border:@defBorder;
+	margin-top:20px;
+	cursor:pointer;
+}
+.form #formSubmit:hover {
+	background:@primary3;
+	color:#fff;
+}
+.form #formSubmit:active {
+	font-weight: bold;
+}
+.form input:focus, textarea:focus {
+	border:2px solid @secondary1;
+}
+
+.footer {
+	.RoundTop();
+	.PaddingV();
+	background:@defForeColour;
+	overflow:hidden;
+	text-align:center;
+}
+
+.nomargin {
+	width:inherit;
+	margin-left:0px;
+	margin-right:0px;
+}
